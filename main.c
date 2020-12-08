@@ -8,6 +8,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "Timer/timer.h"
+#include "USART/USART.h"
 
 
 int main(void)
