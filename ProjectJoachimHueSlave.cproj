@@ -148,6 +148,12 @@
     <Compile Include="Timer\timer.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="USART\USART.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="USART\USART.h">
+      <SubType>compile</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Timer" />
