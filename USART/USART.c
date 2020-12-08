@@ -8,7 +8,6 @@
 #include <avr/io.h>
 #include <util/setbaud.h>
 
-
 void USART_Init(void){
 	UBRR0H = UBRRH_VALUE;					// set UART0 baud rate with setbaud-library
 	UBRR0L = UBRRL_VALUE;
@@ -16,7 +15,6 @@ void USART_Init(void){
 	UCSR0B = (1<<RXEN0) | (1<<TXEN0);		// Enable Receiver and Transmitter (19.10.3)
 	UCSR0C = (1<<UCSZ01)|(1<<UCSZ00);		// Set frame format: 8 bit data, 1 stop bit (19.10.4) og Table 19-7
 }
-
 
 unsigned char USART_Receive(void)
 {
