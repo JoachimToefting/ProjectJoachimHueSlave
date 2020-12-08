@@ -8,6 +8,7 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "Timer/timer.h"
+#include "USART/USART.h"
 
 
 int main(void)
@@ -34,5 +35,5 @@ int main(void)
 void Init(void){
 	//output on PORTB bit 1,2,3
 	DDRB |= (1<<PORTB1) | (1<<PORTB2) | (1<<PORTB3);
-	Init_Timer();
+	Timer_Init();
 }
