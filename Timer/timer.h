@@ -9,6 +9,6 @@
 #ifndef TIMER_H_
 #define TIMER_H_
 
-void Init_Timer(void);
+void Timer_Init(void);
 
 #endif /* TIMER_H_ */
