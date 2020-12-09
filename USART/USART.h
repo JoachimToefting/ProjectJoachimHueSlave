@@ -14,5 +14,6 @@
 #define BAUD_TOL 2
 
 void USART_Init(void);
+unsigned char USART_Receive(void);
 
 #endif /* USART_H_ */
