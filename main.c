@@ -19,7 +19,7 @@ int main(void)
 	
 	while (1)
 	{
-		ReciveData();
+		ReceiveData();
 		OCR1A = directColor[0];		// Red
 		OCR1B = directColor[1];		// Green
 		OCR0A = directColor[2];		// Blue
@@ -33,14 +33,14 @@ void Init(void){
 	Timer_Init();
 	USART_Init();
 }
-void ReciveData(void){
+void ReceiveData(void){
 	while (1)
 	{
 		unsigned char tmpChar = USART_Receive();
 		switch (tmpChar)
 		{
 			case 'S':
-			RecieveColor();
+			ReceiveColor();
 			ColorCalculator();
 			return;
 			break;
@@ -50,7 +50,7 @@ void ReciveData(void){
 		}
 	}
 }
-void RecieveColor(void){
+void ReceiveColor(void){
 	for (char cnt = 0; cnt < 9; cnt++)
 	{
 		color[cnt] = USART_Receive();
