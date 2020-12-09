@@ -26,7 +26,7 @@ void Timer_Init(void){
 	TCCR0A |= (1<<WGM00) | (1<<WGM01);
 	
 	//Compare Output Mode (Table 14-3) set to: non-inverting mode
-	TCCR0A |= (1<<COM0A1) ;
+	TCCR0A |= (1<<COM0A1);
 	
 	//Clock Select Bit (Table 14-9) set to: clk_io/64 prescaler
 	TCCR0B |= (1<<CS11) | (1<<CS10);
