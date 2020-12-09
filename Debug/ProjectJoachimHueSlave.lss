@@ -23,11 +23,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
   9 .debug_frame  00000148  00000000  00000000  00001920  2**2
                   CONTENTS, READONLY, DEBUGGING
- 10 .debug_str    00000459  00000000  00000000  00001a68  2**0
+ 10 .debug_str    000003f9  00000000  00000000  00001a68  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_loc    00000219  00000000  00000000  00001ec1  2**0
+ 11 .debug_loc    00000219  00000000  00000000  00001e61  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_ranges 00000058  00000000  00000000  000020da  2**0
+ 12 .debug_ranges 00000058  00000000  00000000  0000207a  2**0
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -105,7 +105,7 @@ int main(void)
 	{
 		ReciveData();
   9c:	0e 94 87 00 	call	0x10e	; 0x10e <ReciveData>
-		OCR1A = directColor[0];
+		OCR1A = directColor[0];		// Red
   a0:	88 e8       	ldi	r24, 0x88	; 136
   a2:	90 e0       	ldi	r25, 0x00	; 0
   a4:	20 91 09 01 	lds	r18, 0x0109	; 0x800109 <directColor>
@@ -114,7 +114,7 @@ int main(void)
   ac:	fc 01       	movw	r30, r24
   ae:	31 83       	std	Z+1, r19	; 0x01
   b0:	20 83       	st	Z, r18
-		OCR1B = directColor[1];
+		OCR1B = directColor[1];		// Green
   b2:	8a e8       	ldi	r24, 0x8A	; 138
   b4:	90 e0       	ldi	r25, 0x00	; 0
   b6:	20 91 0a 01 	lds	r18, 0x010A	; 0x80010a <directColor+0x1>
@@ -123,7 +123,7 @@ int main(void)
   be:	fc 01       	movw	r30, r24
   c0:	31 83       	std	Z+1, r19	; 0x01
   c2:	20 83       	st	Z, r18
-		OCR0A = directColor[2];
+		OCR0A = directColor[2];		// Blue
   c4:	87 e4       	ldi	r24, 0x47	; 71
   c6:	90 e0       	ldi	r25, 0x00	; 0
   c8:	20 91 0b 01 	lds	r18, 0x010B	; 0x80010b <directColor+0x2>
@@ -140,7 +140,7 @@ void Init(void){
   d4:	df 93       	push	r29
   d6:	cd b7       	in	r28, 0x3d	; 61
   d8:	de b7       	in	r29, 0x3e	; 62
-	//output på PORTB bit 1,2,3
+	//output på PORTB bit 1,2 og PORTD bit 6
 	DDRB |= (1<<PORTB1) | (1<<PORTB2);
   da:	84 e2       	ldi	r24, 0x24	; 36
   dc:	90 e0       	ldi	r25, 0x00	; 0

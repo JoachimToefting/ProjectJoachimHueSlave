@@ -27,7 +27,7 @@ int main(void)
 }
 
 void Init(void){
-	//output på PORTB bit 1,2,3
+	//output på PORTB bit 1,2 og PORTD bit 6
 	DDRB |= (1<<PORTB1) | (1<<PORTB2);
 	DDRD |= (1<<PORTD6);
 	Timer_Init();
