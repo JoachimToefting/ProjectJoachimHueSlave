@@ -12,8 +12,8 @@
 #define F_CPU 16000000UL
 
 void ColorCalculator(void);
-void RecieveColor(void);
-void ReciveData(void);
+void ReceiveColor(void);
+void ReceiveData(void);
 void Init(void);
 
 #endif /* MAIN_H_ */
